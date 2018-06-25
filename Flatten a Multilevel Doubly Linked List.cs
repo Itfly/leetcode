@@ -40,3 +40,54 @@ public class Solution {
     }
 }
 
+// Recursive method:
+
+    public class Solution
+    {
+        public Node Flatten(Node head)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+
+            var h = head;
+            FlattenHelper(head);
+            return h;
+        }
+
+        public Node FlattenHelper(Node head)
+        {
+            while (head.next != null && head.child == null)
+            {
+                head = head.next;
+            }
+
+            if (head.next == null && head.child == null)
+            {
+                return head;
+            }
+
+            var next = head.next;
+            var child = head.child;
+            head.child = null;
+            head.next = child;
+            child.prev = head;
+
+            var cur = FlattenHelper(child);
+                        head.child = null;
+
+            if (next != null)
+            {
+                cur.next = next;
+                next.prev = cur;
+                return FlattenHelper(next);
+            }
+            else
+            {
+                return cur;
+            }
+
+        }
+    }
+
