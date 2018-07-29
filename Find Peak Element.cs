@@ -20,3 +20,5 @@ public class Solution {
         return -1;
     }
 }
+
+// Better solution: https://leetcode.com/problems/find-peak-element/discuss/50239/Java-solution-and-explanation-using-invariants
