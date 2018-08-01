@@ -30,21 +30,18 @@ public class Solution {
         
         var queue = new Queue<int>();
         queue.Enqueue(i * n + j);
+        grid[i, j] = '0';
         while (queue.Count > 0) {
             var loc = queue.Dequeue();
             i = loc / n;
             j = loc % n;
-            if (grid[i, j] == '0') {
-                continue;
-            }
-            
-            grid[i, j] = '0';
             
             for (var k = 0; k < 4; k++) {
                 var ii = i + dir[k, 0];
                 var jj = j + dir[k, 1];
                 if (ii >= 0 && ii < m && jj >= 0 && jj < n && grid[ii, jj] == '1') {
                     queue.Enqueue(ii * n + jj);
+                    grid[ii, jj] = '0';
                 }
             }
         }
