@@ -21,6 +21,20 @@ public class Solution {
         return cnt;
     }
     
+    private void dfs(char[,] grid, int i, int j, int m, int n) {
+        if (i < 0 || i >= m || j < 0 || j >= n) {
+            return;
+        }
+        
+        if (grid[i, j] == '1') {
+            grid[i, j] = '0';
+            dfs(grid, i - 1, j, m, n);
+            dfs(grid, i + 1, j, m, n);
+            dfs(grid, i, j - 1, m, n);
+            dfs(grid, i, j + 1, m, n);
+        }
+    }
+    
     private static int[,] dir = new int[4,2] { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
     
     private void bfs(char[,] grid, int i, int j, int m, int n) {
