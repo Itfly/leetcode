@@ -20,4 +20,36 @@ public class Solution {
         
         return result.ToArray();
     }
+    
+    // Hashmap
+    public int[] Intersect(int[] nums1, int[] nums2) {
+        var map1 = new Dictionary<int, int>();
+        foreach (var num in nums1) {
+            if (map1.ContainsKey(num)) {
+                ++map1[num];
+            } else {
+                map1[num] = 1;
+            }
+        }
+        
+        var map2 = new Dictionary<int, int>();
+        foreach (var num in nums2) {
+            if (map1.ContainsKey(num) && map1[num] > 0) {
+                if (map2.ContainsKey(num)) {
+                    ++map2[num];
+                } else {
+                    map2[num] = 1;
+                }
+                --map1[num];
+            }
+        }
+        
+        var result = new List<int>();
+        foreach (var entry in map2) {
+            for (var i = 0; i < entry.Value; i++) {
+                result.Add(entry.Key);
+            }
+        }
+        return result.ToArray();
+    }
 }
