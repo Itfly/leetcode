@@ -15,31 +15,20 @@ public class KthLargest {
     }
     
     private int Search(TreeNode root, int k) {
-        var cur = root;
-        while (cur.right != null && cur.right.count > k) {
-            cur = cur.right;
+        if (root.right?.count >= k) {
+            return Search(root.right, k);
         }
         
-        if (cur.right != null) {
-            k -= cur.right.count;  
-            if (k == 0) {
-                cur = cur.right;
-                while (cur.left != null) {
-                    cur = cur.left;
-                }
-                return cur.val;
-            }
+        if (root.right != null) {
+            k -= root.right.count;
+        }
+        if (k <= root.valCnt) {
+            return root.val;
         }
         
-        
-        k -= cur.valCnt;
-        if (k <= 0) {
-            return cur.val;
-        } else {
-            return Search(cur.left, k);
-        }
+        k -= root.valCnt;
+        return Search(root.left, k);
     }
-    
     
     private void Insert(int val) {
         if (this.root == null) {
