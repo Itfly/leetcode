@@ -1,4 +1,3 @@
-leetcode
+Leetcode solutions
 ========
 
-leetcode source code
