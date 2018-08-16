@@ -5,7 +5,6 @@ public class Solution {
         }
         
         var result = 1;
-        var visited = new HashSet<string>();
         var wordSet = new HashSet<string>(wordList);
         var queue = new Queue<string>();
         queue.Enqueue(beginWord);
@@ -24,8 +23,8 @@ public class Solution {
                             return result + 1;
                         }
                         
-                        if (wordSet.Contains(str) && !visited.Contains(str)) {
-                            visited.Add(str);
+                        if (wordSet.Contains(str)) {
+                            wordSet.Remove(str);
                             queue.Enqueue(str);
                         }
                     }
