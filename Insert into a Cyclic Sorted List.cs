@@ -49,3 +49,39 @@ public class Solution {
     }
 }
 
+// Not test
+    public class Solution
+    {
+        public ListNode Insert(ListNode node, int x)
+        {
+            var newNode = new ListNode(x);
+            if (node == null)
+            {
+                newNode.next = newNode;
+                return newNode;
+            }
+
+            var cur = node.next;
+            var pre = node;
+            while (cur != node)
+            {
+                if (pre.val <= x && cur.val >= x)
+                {
+                    break;
+                }
+
+                if (pre.val > cur.val && (pre.val < x || cur.val > x))
+                {
+                    break;
+                }
+
+                pre = cur;
+                cur = cur.next;
+            }
+
+            pre.next = newNode;
+            newNode.next = cur;
+
+            return node;
+        }
+    }
