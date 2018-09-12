@@ -48,3 +48,7 @@ public class Solution {
         return current;
     }
 }
+
+
+// Or else use the below method: align at position, add l1,l2 to l with reverse link, then revese the link and deal with the carry.
+// https://leetcode.com/problems/add-two-numbers-ii/discuss/92788/Java-iterative-O(1)-space-lastNot9-solution-Changed-from-Plus-One-Linked-List
