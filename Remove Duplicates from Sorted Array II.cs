@@ -26,3 +26,26 @@ public class Solution {
         return i + 1;
     }
 }
+
+public class Solution {
+    public int RemoveDuplicates(int[] nums) {
+        var n = nums.Length;
+        if (n < 3) {
+            return n;
+        }
+        
+        int i = 1;
+        var isTwice = false;
+        for (var j = 1; j < n; j++) {
+            if (nums[j] == nums[j - 1] && !isTwice) {
+                isTwice = true;
+                nums[i++] = nums[j];
+            } else if (nums[j] != nums[j - 1]) {
+                isTwice = false;
+                nums[i++] = nums[j];
+            }
+        }
+        
+        return i;
+    }
+}
