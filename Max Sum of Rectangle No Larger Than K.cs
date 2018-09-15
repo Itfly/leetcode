@@ -47,6 +47,8 @@ public class Solution {
     }
 }
 
+// Another better csharp solution: https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/discuss/83607/C-solution-both-row-and-col-use-Kadane's-algo
+
 // Since csharp do not have treeset or set like java and c++, here's a c++ version:
 class Solution {
 public:
@@ -76,4 +78,5 @@ int maxSumSubmatrix(vector<vector<int>>& matrix, int k) {
     return res;
 }
 };
+
 
