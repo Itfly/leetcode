@@ -21,3 +21,6 @@ public class Solution {
         return (num - 1).ToString();
     }
 } 
+
+
+https://leetcode.com/problems/smallest-good-base/discuss/96591/Java-O((logn)2)-binary-search-solution
