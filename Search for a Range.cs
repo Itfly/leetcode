@@ -5,7 +5,6 @@ public class Solution {
             return ranges;
         }
         
-        
         var low = 0;
         var high = nums.Length - 1;
         

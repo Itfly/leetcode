@@ -75,7 +75,7 @@ public class Solution {
             child.prev = head;
 
             var cur = FlattenHelper(child);
-                        head.child = null;
+            //head.child = null;
 
             if (next != null)
             {

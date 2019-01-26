@@ -22,7 +22,7 @@ public:
                 int j = 0;
                 while (j < n) {
                     if (dict.find(word) == dict.end()){
-                        i += j*k;    //当找到一个不在L中的word时，i可以往前走j*k步
+                        i += j*k;
                         break;
                     }
                     needed[word]++;

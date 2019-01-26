@@ -22,6 +22,7 @@ public class Solution {
     
     // O(NlogN)
     // https://www.felix021.com/blog/read.php?1587
+    // https://www.programcreek.com/2014/04/leetcode-longest-increasing-subsequence-java/
     public int LengthOfLIS(int[] nums) {
         if (nums == null || nums.Length == 0) {
             return 0;

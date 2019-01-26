@@ -17,7 +17,6 @@ public class Solution {
             return sequence;
         }
         
-        
         foreach (var child in root.children) {
             sequence.AddRange(Postorder(child));
         }

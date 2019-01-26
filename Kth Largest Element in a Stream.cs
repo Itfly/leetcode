@@ -74,6 +74,8 @@ public class KthLargest {
     }
 }
 
+// TODO: use min heap
+
 /**
  * Your KthLargest object will be instantiated and called as such:
  * KthLargest obj = new KthLargest(k, nums);

@@ -2,7 +2,7 @@ https://leetcode.com/problems/integer-replacement/discuss/87920/A-couple-of-Java
 
 public class Solution {
     public int IntegerReplacement(int n) {
-        if(n==int.MaxValue) return 32;
+        if(n == int.MaxValue) return 32;
         
         var count = 0;
         while (n != 1) {

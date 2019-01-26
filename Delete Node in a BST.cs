@@ -25,8 +25,7 @@ public class Solution {
     }
     
     private TreeNode DeleteNode(TreeNode root) {
-        if (root.left != null && root.right != null) 
-        {
+        if (root.left != null && root.right != null) {
             var temp = root.right;
             while (temp.left != null) {
                 temp = temp.left;

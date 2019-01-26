@@ -18,6 +18,8 @@ public class Solution {
     
     // HashSet
     public int[] Intersection(int[] nums1, int[] nums2) {
+        // TODO: use smaller and larger array reference, and set1 = new HashSet(smaller)
+        
         var set1 = new HashSet<int>();
         foreach (var num in nums1) {
             set1.Add(num);

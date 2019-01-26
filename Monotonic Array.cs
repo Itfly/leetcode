@@ -1,12 +1,15 @@
 public class Solution {
     public bool IsMonotonic(int[] A) {
-        var asc = true;
-        var desc = true;
+        var asc = false;
+        var desc = false;
         for (var i = 1; i < A.Length; i++) {
-            asc = asc && (A[i] >= A[i - 1]);
-            desc = desc && (A[i] <= A[i - 1]);
-            
-            if ((asc || desc) == false) {
+            if (A[i] > A[i - 1]) {
+                asc = true;
+            }
+            if (A[i] < A[i - 1]) {
+                desc = true;
+            }
+            if (asc && desc) {
                 return false;
             }
         }

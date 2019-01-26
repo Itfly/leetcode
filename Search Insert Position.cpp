@@ -15,6 +15,5 @@ public:
         }
         
         return A[mid] < target ? mid + 1 : mid;
-        
     }
 };

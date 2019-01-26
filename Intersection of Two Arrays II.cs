@@ -32,6 +32,7 @@ public class Solution {
             }
         }
         
+        // TODO: use List here
         var map2 = new Dictionary<int, int>();
         foreach (var num in nums2) {
             if (map1.ContainsKey(num) && map1[num] > 0) {

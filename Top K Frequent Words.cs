@@ -8,8 +8,6 @@ public class Solution {
                 map[word] = 1;
             }
         }
-        
-        
     }
     
     class Heap {

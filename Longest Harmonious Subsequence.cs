@@ -16,7 +16,7 @@ public class Solution {
         
         foreach (var entity in map) {
             if (map.ContainsKey(entity.Key + 1)) {
-                max = Math.Max(max, map[entity.Key + 1] + entity.Value);        
+                max = Math.Max(max, map[entity.Key + 1] + entity.Value);
             }
         }
         

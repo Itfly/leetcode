@@ -9,6 +9,7 @@ public class Solution {
         var end = nums.Length - 1;
         while (i <= end) {
             if (nums[i] == 0) {
+                // swap
                 nums[i] = nums[start];
                 nums[start++] = 0;
             }

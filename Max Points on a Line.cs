@@ -7,9 +7,7 @@ public class Solution
                 return 0;
             }
 
-
             var result = 0;
-
             for (var i = 0; i < points.Length; i++)
             {
                 var dups = 1;

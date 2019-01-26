@@ -43,3 +43,5 @@ public class Solution {
         return isNum && start == end;
     }
 }
+
+// TODO: use FSM transform matrix

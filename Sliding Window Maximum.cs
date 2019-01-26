@@ -12,8 +12,7 @@ public class Solution {
                 queue.RemoveFirst();
             }
             
-            // The queue is sorted and the last one is minimum value's index of the current window.
-            // And the new one is in the tail side.
+            // Remove all the indexes of which values are smaller then new one
             while (queue.Count > 0 && nums[queue.Last.Value] < nums[i]) {
                 queue.RemoveLast();
             }

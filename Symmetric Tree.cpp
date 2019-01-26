@@ -15,6 +15,7 @@ public:
         if (l->val != r->val) return false;
         return helper(l->left, r->right) && helper(l->right, r->left);
     }
+
     bool isSymmetric(TreeNode *root) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function

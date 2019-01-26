@@ -19,7 +19,7 @@ public class Solution {
             if (val % 2 == 0) {
                 result += val;
             } else {
-                result += val / 2 * 2;
+                result += val - 1;
                 hasSingle = true;
             }
         }

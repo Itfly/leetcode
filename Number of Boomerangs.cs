@@ -1,7 +1,6 @@
 public class Solution {
     public int NumberOfBoomerangs(int[,] points) {
         var result = 0;
-        
         var map = new Dictionary<int, int>();
         var n = points.GetLength(0);
         for (var i = 0; i < n; i++) {

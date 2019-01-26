@@ -29,7 +29,6 @@ public class Solution {
                         return steps;
                     }
 
-
                     var chs = cur.ToCharArray();
                     for (var j = 0; j < 4; j++)
                     {

@@ -1,6 +1,6 @@
 public class Solution {
     public int ComputeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
-        if (C < E || G <A || D < F || H < B) {
+        if (C < E || G < A || D < F || H < B) {
             // no overlap
             return (C - A) * (D - B) + (G - E) * (H - F);
         }

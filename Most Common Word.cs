@@ -19,7 +19,7 @@ public class Solution {
                         }
                         max = Math.Max(max, map[word]);
                     }
-                    sb = new StringBuilder();
+                    sb = new StringBuilder();  // or sb.Clear()
                 }
             } else {
                 sb.Append(paragraph[i]);

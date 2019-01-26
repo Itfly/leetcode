@@ -94,6 +94,9 @@ public class LFUCache {
     }
 }
 
+
+// better: https://www.jianshu.com/p/437f53341f67
+
 /**
  * Your LFUCache object will be instantiated and called as such:
  * LFUCache obj = new LFUCache(capacity);

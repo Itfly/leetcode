@@ -4,8 +4,8 @@ public class Solution {
             return false;
         }
         
-        var x = int.MaxValue;
-        var y = int.MaxValue;
+        var x = int.MaxValue; // minimal number in the current nums
+        var y = int.MaxValue; // there's at least one smaller num before itself because of the 'else if' setence
         for (var i = 0; i < nums.Length; i++) {
             var z = nums[i];
             if (x >= z) {

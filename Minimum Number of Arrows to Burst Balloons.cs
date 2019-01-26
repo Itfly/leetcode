@@ -34,3 +34,5 @@ public class Solution {
         return arrays;
     }
 }
+
+// TODO: use this one : http://www.cnblogs.com/grandyang/p/6050562.html

@@ -17,7 +17,7 @@ public class Solution {
         TreeNode cur = root;
         while (cur != null) {
             if (cur.val == val) {
-                break;
+                break; // never happen
             } else if (cur.val > val) {
                 pre = cur;
                 cur = cur.left;

@@ -18,11 +18,7 @@ public:
         	return false;
         }
         
-        if (!isBST(root->left, min, root->val) ||
-        		!isBST(root->right, root->val, max)) {
-        			return false;
-        }
-        return true;    
+        return isBST(root->left, min, root->val) && isBST(root->right, root->val, max);    
     }
     bool isValidBST(TreeNode *root) {
         // Start typing your C/C++ solution below

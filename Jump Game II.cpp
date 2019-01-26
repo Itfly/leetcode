@@ -20,6 +20,7 @@ public:
     */
         int last = 0, cur = 0, steps = 0;
         for (int i = 0; i < n; i++) {
+            // when last jump can not read current i, increase the step by 1
             if (i > last) {
                 last = cur;
                 steps++;

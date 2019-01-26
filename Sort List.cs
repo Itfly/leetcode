@@ -19,7 +19,6 @@ public class Solution {
             len++;
         }
         
-        
         return MergeSort(head, len);
     }
     

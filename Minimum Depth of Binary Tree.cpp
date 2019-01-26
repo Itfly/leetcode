@@ -21,8 +21,6 @@ public:
         } else {
             return min(minDepth(root->left), minDepth(root->right)) + 1;
         }
-        
-        
     }
 };
 
