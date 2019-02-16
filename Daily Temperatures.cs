@@ -5,12 +5,12 @@ public class Solution {
         
         for (var i = 0; i < temperatures.Length; i++) {
             while (stack.Count > 0 && temperatures[stack.Peek()] < temperatures[i]) {
-                waits[stack.Peek()] = i - stack.Peek();
-                stack.Pop();
+                var peek = stack.Pop();
+                waits[peek] = i - peek;
             }
-            
             stack.Push(i);
         }
+
         return waits;
     }
 }
